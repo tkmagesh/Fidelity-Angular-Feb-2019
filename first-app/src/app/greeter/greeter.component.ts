@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
 })
 export class GreeterComponent{
     greetMessage : string = '[ Dummy greet message ]';
-    
+
+    onGreetClick(userName : string){
+        //let userName = prompt('Enter the username :');
+        this.greetMessage = `Hi ${userName}, Have a nice day!`;
+    }
 }
