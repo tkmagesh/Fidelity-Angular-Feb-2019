@@ -1,5 +1,5 @@
 <section class="stats">
-        <span class="closed">1</span>
+        <span class="closed">{{getClosedCount()}}</span>
         <span> / </span>
         <span>{{bugs.length}}</span>
     </section>
@@ -36,5 +36,5 @@
             </li>
             -->
         </ol>
-        <input type="button" value="Remove Closed">
+        <input type="button" value="Remove Closed" (click)="onRemoveClosedClick()">
     </section>
