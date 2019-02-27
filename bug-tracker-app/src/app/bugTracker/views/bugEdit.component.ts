@@ -20,9 +20,14 @@ export class BugEditComponent{
     constructor(private bugOperations : BugOperationsService){
     }
     onAddNewClick(newBugName : string){
+        /*
         let newBug : Bug = this.bugOperations.createNew(newBugName);
-        //this.bugs.push(newBug);
         this.bugAdded.emit(newBug);
+        */
+
+        this.bugOperations
+            .createNew(newBugName)
+            .subscribe(newBug => this.bugAdded.emit(newBug));
     }
 
 }
