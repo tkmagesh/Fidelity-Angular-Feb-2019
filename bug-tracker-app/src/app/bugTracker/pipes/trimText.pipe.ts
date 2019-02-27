@@ -1,10 +1,10 @@
-import { Pipe } from "@angular/core";
+import { Pipe, PipeTransform } from "@angular/core";
 
 @Pipe({
     name : 'trimText'
 })
-export class TrimTextPipe{
-    transform(data : string) : string{
-        return data.length < 30 ? data : data.substr(0,30) + '...';
+export class TrimTextPipe implements PipeTransform {
+    transform(data : string, trimLength : number = 30) : any{
+        return data.length < trimLength ? data : data.substr(0,trimLength) + '...';
     }
 }
