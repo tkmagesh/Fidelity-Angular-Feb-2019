@@ -29,10 +29,9 @@ export class BugTrackerComponent{
        this.bugs = this.bugOperations.getAll();
     }
 
-    onAddNewClick(newBugName : string){
-        let newBug : Bug = this.bugOperations.createNew(newBugName);
-        this.bugs.push(newBug);
-    }
+   onNewBug(newBug : Bug){
+       this.bugs.push(newBug);
+   }
 
     onBugNameClick(bug : Bug){
         this.bugOperations.toggle(bug);
