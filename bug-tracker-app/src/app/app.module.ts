@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { BugOperationsService } from './bugTracker/services/bugOperations.service';
+import { BugStorageService } from './bugTracker/services/bugStorage.service';
 
 import { AppComponent } from './app.component';
 import { BugTrackerComponent } from './bugTracker/bugTracker.component';
@@ -22,6 +23,7 @@ import { SortPipe } from './bugTracker/pipes/sort.pipe';
   ],
   providers: [
     BugOperationsService
+    , BugStorageService
   ],
   bootstrap: [AppComponent]
 })
