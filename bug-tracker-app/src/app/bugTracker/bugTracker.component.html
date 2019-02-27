@@ -27,14 +27,8 @@
                 >
                     {{bug.name | trimText:40}}
                 </span>
-                <div class="datetime">[Created At]</div>
+                <div class="datetime">{{ bug.createdAt | elapsed}}</div>
             </li>
-           <!--
-                <li>
-                <span class="bugname closed">[This is bug - 2]</span>
-                <div class="datetime">[Created At]</div>
-            </li>
-            -->
         </ol>
         <input type="button" value="Remove Closed" (click)="onRemoveClosedClick()">
     </section>
